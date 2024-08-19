@@ -4,12 +4,11 @@ import { ItemsComponent } from './items/items.component';
 import { CustomersComponent } from './customers/customers.component';
 import { OrdersComponent } from './orders/orders.component';
 
-// Definisikan routes
 const routes: Routes = [
-  { path: 'customers', component: CustomersComponent },
   { path: 'items', component: ItemsComponent },
+  { path: 'customers', component: CustomersComponent },
   { path: 'orders', component: OrdersComponent },
-  { path: '', redirectTo: '/customers', pathMatch: 'full' }
+  { path: '', redirectTo: '/items', pathMatch: 'full' }
 ];
 
 @NgModule({
