@@ -1,0 +1,63 @@
+<div class="title">
+  <h3 mat-dialog-title>Add Customer</h3>
+</div>
+
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()"  enctype="multipart/form-data">
+    <div class="form-container">
+      <div class="form-group">
+        <label>Customer Name:</label>
+        <input formControlName="customerName" type="text" class="form-control">
+        <div *ngIf="customerForm?.get('customerName')?.invalid && (customerForm?.get('customerName')?.dirty || customerForm?.get('customerName')?.touched)">
+          <div *ngIf="customerForm?.get('customerName')?.errors?.['required']">
+            Customer name is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Customer Code:</label>
+        <input formControlName="customerCode" type="text" class="form-control">
+        <div *ngIf="customerForm?.get('customerCode')?.invalid && (customerForm?.get('customerCode')?.dirty || customerForm?.get('customerCode')?.touched)">
+          <div *ngIf="customerForm?.get('customerCode')?.errors?.['required']">
+            Customer code is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Address:</label>
+        <input formControlName="customerAddress" type="text" class="form-control">
+        <div *ngIf="customerForm?.get('customerAddress')?.invalid && (customerForm?.get('customerAddress')?.dirty || customerForm?.get('customerAddress')?.touched)">
+          <div *ngIf="customerForm?.get('customerAddress')?.errors?.['required']">
+            Customer address is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Phone:</label>
+        <input formControlName="customerPhone" type="text" class="form-control">
+        <div *ngIf="customerForm?.get('customerPhone')?.invalid && (customerForm?.get('customerPhone')?.dirty || customerForm?.get('customerPhone')?.touched)">
+          <div *ngIf="customerForm?.get('customerPhone')?.errors?.['required']">
+            Customer phone is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Upload File:</label>
+        <input type="file" (change)="onFileChange($event)" class="form-control">
+        <div *ngIf="customerForm?.get('pic')?.invalid && (customerForm?.get('pic')?.dirty || customerForm?.get('pic')?.touched)">
+          <div *ngIf="customerForm?.get('pic')?.errors?.['required']">
+            File is required.
+          </div>
+        </div>
+      </div>
+  
+    <div class="button-container">
+      <button type="batal" class="batal-btn" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+
+    </div>
+  </form>

@@ -1,0 +1,31 @@
+<div class="title">
+    <h3 mat-dialog-title>Update Order</h3>
+</div>
+  
+  <form (ngSubmit)="save()" class="form-container">
+    <div class="form-group">
+      <label for="orderCode">Order Code:</label>
+      <input id="orderCode" matInput [(ngModel)]="orderForm.controls['orderCode'].value" name="orderCode" type="text" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="customerId">Customer ID:</label>
+      <input id="customerId" matInput [(ngModel)]="orderForm.controls['customerId'].value" name="customerId" type="number" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="itemId">Item ID:</label>
+      <input id="itemId" matInput [(ngModel)]="orderForm.controls['itemId'].value" name="itemId" type="number" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input id="quantity" matInput [(ngModel)]="orderForm.controls['quantity'].value" name="quantity" type="number" required>
+    </div>
+  
+    <div class="button-container">
+        <button type="batal" class="batal-btn" (click)="onCancel()">Cancel</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+  </form>
+  

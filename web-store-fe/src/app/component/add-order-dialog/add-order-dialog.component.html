@@ -1,0 +1,55 @@
+<div class="title">
+    <h3 mat-dialog-title>Add Order</h3>
+  </div>
+  
+  <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+  
+      <div class="form-group">
+        <label>Order Code:</label>
+        <input formControlName="orderCode" type="text" class="form-control">
+        <div *ngIf="orderForm?.get('orderCode')?.invalid && (orderForm?.get('orderCode')?.dirty || orderForm?.get('orderCode')?.touched)">
+          <div *ngIf="orderForm?.get('orderCode')?.errors?.['required']">
+            Order code is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Customer ID:</label>
+        <input formControlName="customerId" type="number" class="form-control">
+        <div *ngIf="orderForm?.get('customerId')?.invalid && (orderForm?.get('customerId')?.dirty || orderForm?.get('customerId')?.touched)">
+          <div *ngIf="orderForm?.get('customerId')?.errors?.['required']">
+            Customer ID is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Item ID:</label>
+        <input formControlName="itemId" type="number" class="form-control">
+        <div *ngIf="orderForm?.get('itemId')?.invalid && (orderForm?.get('itemId')?.dirty || orderForm?.get('itemId')?.touched)">
+          <div *ngIf="orderForm?.get('itemId')?.errors?.['required']">
+            Item ID is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Quantity:</label>
+        <input formControlName="quantity" type="number" class="form-control">
+        <div *ngIf="orderForm?.get('quantity')?.invalid && (orderForm?.get('quantity')?.dirty || orderForm?.get('quantity')?.touched)">
+          <div *ngIf="orderForm?.get('quantity')?.errors?.['required']">
+            Quantity is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="button-container">
+        <button type="batal" (click)="onCancel()" class="batal-btn">Cancel</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+  
+    </div>
+  </form>
+  

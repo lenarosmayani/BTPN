@@ -1,0 +1,29 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <h2>Customer Details</h2>
+  </div>
+  <div class="dialog-content">
+    <div class="customer-image">
+      <img [src]="data.pic" alt="Customer Picture" />
+    </div>
+    <div class="customer-details two-column">
+      <div class="label">ID </div>
+      <div class="value">{{ data.customerId }}</div>
+
+      <div class="label">Name </div>
+      <div class="value">{{ data.customerName }}</div>
+
+      <div class="label">Customer Code </div>
+      <div class="value">{{ data.customerCode }}</div>
+
+      <div class="label">Address </div>
+      <div class="value">{{ data.customerAddress }}</div>
+
+      <div class="label">Phone </div>
+      <div class="value">{{ data.customerPhone }}</div>
+    </div>
+  </div>
+  <div class="dialog-actions">
+    <button mat-raised-button class="close-button" (click)="closeDialog()">Close</button>
+  </div>
+</div>

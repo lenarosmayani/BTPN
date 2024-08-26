@@ -1,0 +1,27 @@
+<div class="details-container">
+  <div class="details-header">
+    <h2>Item Details</h2>
+  </div>
+  <div class="details-content">
+    <div class="item-details two-column">
+        <div class="detail-label">ID</div>
+        <div class="detail-value">{{ data.itemId }}</div>
+      
+        <div class="detail-label">Name</div>
+        <div class="detail-value">{{ data.itemName }}</div>
+      
+        <div class="detail-label">Item Code</div>
+        <div class="detail-value">{{ data.itemCode }}</div>
+      
+        <div class="detail-label">Stock</div>
+        <div class="detail-value">{{ data.itemStock }}</div>
+      
+        <div class="detail-label">Price</div>
+        <div class="detail-value">{{ data.price | currency:'Rp.' }}</div>
+      
+    </div>
+  </div>
+  <div class="details-actions">
+    <button class="close-button" (click)="closeDialog()">Close</button>
+  </div>
+</div>

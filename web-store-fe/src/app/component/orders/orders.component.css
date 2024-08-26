@@ -1,0 +1,73 @@
+.order-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    gap: 10px;
+
+  }
+
+
+.mat-raised-button.custom-download-button {
+    background-color: #4CAF50 !important; 
+    color: white !important;
+}
+
+.mat-raised-button.custom-download-button:hover {
+    background-color: #45a049 !important; 
+}
+
+  
+  .mat-toolbar {
+    margin-bottom: 16px; 
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .order-details {
+    margin-top: 16px;
+  }
+  
+  /* order Name Cell */
+  .order-name-cell {
+    display: flex;
+    align-order: center;
+  }
+  
+  .search-container {
+    flex-grow: 1;
+    margin-right: 20px;
+    
+  }
+  
+  .search-container input {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+  
+  .add-search{
+    display: flex;
+    justify-content: space-between
+  }  
+ 
+  .delete-button {
+  mat-icon {
+    color: red; /* Set the icon color to red */
+  }
+  
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.1); /* Optional: Add a background color on hover */
+  }
+  }
+  
+  
+  

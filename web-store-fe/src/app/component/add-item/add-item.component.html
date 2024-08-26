@@ -1,0 +1,65 @@
+<div class="title">
+  <h3 mat-dialog-title>Add Item</h3>
+</div>
+  
+  <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+  
+      <div class="form-group">
+        <label>Item Name:</label>
+        <input formControlName="itemName" type="text" class="form-control">
+        <div *ngIf="itemForm?.get('itemName')?.invalid && (itemForm?.get('itemName')?.dirty || itemForm?.get('itemName')?.touched)">
+          <div *ngIf="itemForm?.get('itemName')?.errors?.['required']">
+            Item name is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Item Code:</label>
+        <input formControlName="itemCode" type="text" class="form-control">
+        <div *ngIf="itemForm?.get('itemCode')?.invalid && (itemForm?.get('itemCode')?.dirty || itemForm?.get('itemCode')?.touched)">
+          <div *ngIf="itemForm?.get('itemCode')?.errors?.['required']">
+            Item code is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Stock:</label>
+        <input formControlName="stock" type="number" class="form-control">
+        <div *ngIf="itemForm?.get('stock')?.invalid && (itemForm?.get('stock')?.dirty || itemForm?.get('stock')?.touched)">
+          <div *ngIf="itemForm?.get('stock')?.errors?.['required']">
+            Stock is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Price:</label>
+        <input formControlName="price" type="number" class="form-control">
+        <div *ngIf="itemForm?.get('price')?.invalid && (itemForm?.get('price')?.dirty || itemForm?.get('price')?.touched)">
+          <div *ngIf="itemForm?.get('price')?.errors?.['required']">
+            Stock is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Is Available:</label>
+        <input formControlName="isAvailable" type="number" class="form-control">
+        <div *ngIf="itemForm?.get('isAvailable')?.invalid && (itemForm?.get('isAvailable')?.dirty || itemForm?.get('isAvailable')?.touched)">
+          <div *ngIf="itemForm?.get('isAvailable')?.errors?.['required']">
+            Stock is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="button-container">
+        <button type="batal" class="batal-btn" (click)="onCancel()">Cancel</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+  
+    </div>
+  </form>
+  

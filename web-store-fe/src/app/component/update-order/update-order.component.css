@@ -1,0 +1,71 @@
+.dialog-header {
+    padding: 20px;
+    background-color: #f1f1ec;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"], input[type="date"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    background-color: #1e9107;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #454740;
+  }
+  
+  button[type="batal"] {
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button[type="batal"]:hover {
+    background-color: #f2f2f2;
+    border-color: red;
+  }
+  
+  .button-container {
+    text-align: right;
+  }
+
+  .title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: medium;
+  }
+  

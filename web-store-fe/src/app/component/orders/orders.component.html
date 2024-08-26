@@ -1,0 +1,84 @@
+<div class="order-container">
+    <h2>Order List</h2>
+  
+    
+    <div class="button-container">
+      <button mat-raised-button class="custom-add-button" (click)="openAddOrderDialog()">
+        <mat-icon>add</mat-icon> Add Order
+      </button>
+    
+      <button mat-raised-button class="custom-download-button" (click)="download()">
+        <mat-icon>download</mat-icon> Order History
+      </button> 
+    
+    </div>
+       
+  
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!-- Number Column -->
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef> No </th>
+        <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+      </ng-container>
+  
+      <!-- Order ID Column -->
+      <ng-container matColumnDef="orderId">
+        <th mat-header-cell *matHeaderCellDef> Order ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+      </ng-container>
+
+      <!-- Order Date Column -->
+      <ng-container matColumnDef="ordersDate">
+        <th mat-header-cell *matHeaderCellDef> Order Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.ordersDate | date}} </td>
+      </ng-container>
+  
+      <!-- Customer ID Column -->
+      <ng-container matColumnDef="customerId">
+        <th mat-header-cell *matHeaderCellDef> Customer ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.customerId}} </td>
+      </ng-container>
+  
+      <!-- Items ID Column -->
+      <ng-container matColumnDef="itemsId">
+        <th mat-header-cell *matHeaderCellDef> Items ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.itemsId}} </td>
+      </ng-container>
+  
+      <!-- Quantity Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+      </ng-container>
+  
+      <!-- Total Price Column -->
+      <ng-container matColumnDef="totalPrice">
+        <th mat-header-cell *matHeaderCellDef> Total Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalPrice | currency:'Rp.' }} </td>
+      </ng-container>
+  
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button (click)="viewOrderDetails(element)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <button mat-icon-button (click)="openUpdateDialog(element.orderId)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteOrder(element.orderId)" class="delete-button">
+            <mat-icon>delete</mat-icon>
+          </button>        
+        </td>
+      </ng-container>
+  
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table> 
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

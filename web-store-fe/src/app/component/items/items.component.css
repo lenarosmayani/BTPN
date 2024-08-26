@@ -1,0 +1,70 @@
+.item-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  gap: 10px;
+  
+}
+
+.search-container {
+  flex-grow: 1;
+  margin-right: 20px;
+  
+}
+
+.search-container input {
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  
+}
+
+.add-search{
+  display: flex;
+  justify-content: space-between
+ 
+}
+
+.mat-toolbar {
+  margin-bottom: 16px; 
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.item-details {
+  margin-top: 16px;
+}
+
+.item-name-cell {
+  display: flex;
+  align-item: center;
+}
+
+.item-pic {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.delete-button {
+mat-icon {
+  color: red; 
+}
+
+&:hover {
+  background-color: rgba(255, 0, 0, 0.1); 
+}
+}
+
+
